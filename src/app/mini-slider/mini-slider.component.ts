@@ -17,7 +17,8 @@ export class MiniSliderComponent implements OnInit {
     {altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr6.jpg'},
     {altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr7.jpg'},
     {altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr8.jpg'},
-    {altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr8.jpg'}
+    {altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr8.jpg'},
+    {altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr1.jpg'}
 
     ]
 
@@ -26,7 +27,43 @@ export class MiniSliderComponent implements OnInit {
   ngOnInit(): void {
     //set slider width
     let slider = document.querySelector('.slider-wrap');
-    (slider as HTMLDivElement).style.width = this.images.length * 287.5 + 'px';
+    let sliderWidth = this.images.length * 287.5;
+    (slider as HTMLDivElement).style.width = sliderWidth + 'px';
+
+    let prevButton = document.querySelector('.prev');
+    let nextButton = document.querySelector('.next');
+    let currentSliderPosition = 0;
+
+    nextButton.addEventListener('click', (e) => {
+      if(currentSliderPosition === (sliderWidth - (287.5 * 4))){
+        return;
+      }
+      (prevButton as HTMLDivElement).style.opacity = '1';
+      currentSliderPosition += 287.5;
+      (slider as HTMLDivElement).style.transform = 'translateX('+(-currentSliderPosition)+'px)';
+      this.showHideArrows(currentSliderPosition, sliderWidth, prevButton, nextButton);
+    });
+    prevButton.addEventListener('click', (e) => {
+      if(currentSliderPosition === 0){
+        return;
+      }
+      currentSliderPosition -= 287.5;
+      (slider as HTMLDivElement).style.transform = 'translateX('+(-currentSliderPosition)+'px)';
+      this.showHideArrows(currentSliderPosition, sliderWidth, prevButton, nextButton);
+    });
+    
+  }
+
+  showHideArrows(currentSlidePosition, sliderWidth, prevButton, nextButton){
+    console.log(currentSlidePosition);
+    if(currentSlidePosition === (sliderWidth - (287.5 * 4))){
+      (nextButton as HTMLDivElement).style.opacity = '0';
+    }else{
+      (nextButton as HTMLDivElement).style.opacity = '1';
+    }
+    if(currentSlidePosition === 0) {
+      (prevButton as HTMLDivElement).style.opacity = '0';;
+    }
   }
 
 }
