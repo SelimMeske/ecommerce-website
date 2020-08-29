@@ -1,0 +1,12 @@
+<div class="slider-holder">
+    <div class="image-holder">
+        <img class="slider-image" *ngFor="let image of images; index as i" src="{{image.source}}" alt="{{image.altText}}" [ngClass]="{'active-image':i===0}">
+    </div>
+    <div class="text-holder">
+        <h1>Great quality for a small price</h1>
+        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ab atque iure autem.</h3>
+        <div class="button">
+            <p>Buy Now</p>
+        </div>
+    </div>
+</div>
