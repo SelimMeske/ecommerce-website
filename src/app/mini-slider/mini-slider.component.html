@@ -5,14 +5,24 @@
                 <div *ngFor="let image of images" class="image-card">
                     <img src="{{image.source}}" alt="{{image.altText}}">
                     <div class="product-desc">
-                        <p>Product Name</p>
+                        <p style="font-weight: bold;">Product Name</p>
                         <em>Lorem ipsum dolor sit.</em>
+                        <div class="stars-holder">
+                            <img src="assets/star-full.png" alt="">
+                            <img src="assets/star-full.png" alt="">
+                            <img src="assets/star-full.png" alt="">
+                            <img src="assets/star.png" alt="">
+                            <img src="assets/star.png" alt="">
+                        </div>
                         <p>$29.99</p>
+                        
                     </div>
+                   
                     <div class="hover-product">
                         <img width="35px" style="margin-right: 10px;" src="assets/next.png" alt="">
                         <p>Check it out</p>
                     </div>
+                    
                 </div>
             </div>
             <div class="arrows-holder">
