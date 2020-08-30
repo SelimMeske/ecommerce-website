@@ -4,4 +4,5 @@ export interface ProductObject {
     price: string;
     altText: string;
     source: string;
+    discount: boolean;
 }

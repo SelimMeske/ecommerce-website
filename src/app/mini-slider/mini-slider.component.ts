@@ -9,18 +9,18 @@ import { ProductObject } from '../interfaces/product-object';
 export class MiniSliderComponent implements OnInit {
 
   products: ProductObject[] = [
-    {name: 'Product Name', rating: 5, price: '28.99', altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr1.jpg'},
-    {name: 'Product Name', rating: 3, price: '28.99', altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr2.jpg'},
-    {name: 'Product Name', rating: 1, price: '28.99', altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr3.jpg'},
-    {name: 'Product Name', rating: 1, price: '28.99', altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr4.jpg'},
-    {name: 'Product Name', rating: 4, price: '28.99', altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr5.jpg'},
-    {name: 'Product Name', rating: 5, price: '28.99', altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr6.jpg'},
-    {name: 'Product Name', rating: 5, price: '28.99', altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr7.jpg'},
-    {name: 'Product Name', rating: 3, price: '28.99', altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr8.jpg'},
-    {name: 'Product Name', rating: 3, price: '28.99', altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr4.jpg'},
-    {name: 'Product Name', rating: 2, price: '28.99', altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr2.jpg'},
-    {name: 'Product Name', rating: 5, price: '28.99', altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr5.jpg'},
-    {name: 'Product Name', rating: 4, price: '28.99', altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr6.jpg'},
+    {name: 'Product Name', rating: 5, price: '28.99', altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr1.jpg', discount: false},
+    {name: 'Product Name', rating: 3, price: '28.99', altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr2.jpg', discount: true},
+    {name: 'Product Name', rating: 1, price: '28.99', altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr3.jpg', discount: false},
+    {name: 'Product Name', rating: 1, price: '28.99', altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr4.jpg', discount: false},
+    {name: 'Product Name', rating: 4, price: '28.99', altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr5.jpg', discount: false},
+    {name: 'Product Name', rating: 5, price: '28.99', altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr6.jpg', discount: false},
+    {name: 'Product Name', rating: 5, price: '28.99', altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr7.jpg', discount: false},
+    {name: 'Product Name', rating: 3, price: '28.99', altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr8.jpg', discount: true},
+    {name: 'Product Name', rating: 3, price: '28.99', altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr4.jpg', discount: false},
+    {name: 'Product Name', rating: 2, price: '28.99', altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr2.jpg', discount: false},
+    {name: 'Product Name', rating: 5, price: '28.99', altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr5.jpg', discount: false},
+    {name: 'Product Name', rating: 4, price: '28.99', altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr6.jpg', discount: true},
     ]
 
   constructor() { }

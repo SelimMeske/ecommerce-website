@@ -1,6 +1,9 @@
 <div class="image-card">
-    <img src="{{product.source}}" alt="{{product.altText}}">
-    <div class="product-desc">
+    <div class="img-wrap">
+        <img src="{{product.source}}" alt="{{product.altText}}">
+    </div>
+    
+    <div class="product-desc" [ngClass]="{'no-border': noBorder}">
         <p style="font-weight: bold;">{{product.name}}</p>
         <em>Lorem ipsum dolor sit.</em>
         <div class="stars-holder">
@@ -13,5 +16,8 @@
     <div class="hover-product">
         <img width="35px" style="margin-right: 10px;" src="assets/next.png" alt="">
         <p>Check it out</p>
+    </div>
+    <div *ngIf="product.discount" class="discount">
+        <img src="assets/discount.png" alt="">
     </div>
 </div>

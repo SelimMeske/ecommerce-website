@@ -9,6 +9,7 @@ import { ProductObject } from '../interfaces/product-object';
 export class ProductCardComponent implements OnInit {
 
   @Input() product: ProductObject;
+  @Input() noBorder: boolean;
 
   constructor() { }
 

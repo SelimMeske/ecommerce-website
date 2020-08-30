@@ -1,7 +1,6 @@
 .image-card
     width: 250px
     position: relative
-    overflow: hidden
     display: flex
     justify-content: center
     align-items: center
@@ -11,9 +10,18 @@
 .image-card:hover, .hover-product:hover
     .hover-product
         opacity: 1
-.image-card > img
-    height: 250px
-    width: auto
+    .discount
+        img
+            animation: disc-rotate 4s infinite linear
+.img-wrap
+    overflow: hidden
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    img
+        height: 250px
+        width: auto
 .product-desc
     height: 150px
     width: 100%
@@ -47,3 +55,17 @@
     img
         width: 15px
         margin-right: 4px
+.no-border
+    border-bottom: none
+.discount
+    position: absolute
+    top: -20px
+    right: -10px
+    z-index: 200
+    img
+        width: 50px
+@keyframes disc-rotate
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(360deg)
