@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ImageObject } from '../interfaces/image-object';
+import { ProductObject } from '../interfaces/product-object';
 
 @Component({
   selector: 'app-big-slider',
@@ -8,7 +8,7 @@ import { ImageObject } from '../interfaces/image-object';
 })
 export class BigSliderComponent implements OnInit {
 
-  images: ImageObject[] = [
+  images = [
     { altText: 'slider-image', source: 'assets/p-1.jpg' },
     { altText: 'slider-image', source: 'assets/p-2.jpg' },
     { altText: 'slider-image', source: 'assets/p-3.jpg' }

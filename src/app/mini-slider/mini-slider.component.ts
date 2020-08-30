@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ImageObject } from '../interfaces/image-object';
+import { ProductObject } from '../interfaces/product-object';
 
 @Component({
   selector: 'app-mini-slider',
@@ -8,18 +8,19 @@ import { ImageObject } from '../interfaces/image-object';
 })
 export class MiniSliderComponent implements OnInit {
 
-  images: ImageObject[] = [
-    {altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr1.jpg'},
-    {altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr2.jpg'},
-    {altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr3.jpg'},
-    {altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr4.jpg'},
-    {altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr5.jpg'},
-    {altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr6.jpg'},
-    {altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr7.jpg'},
-    {altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr8.jpg'},
-    {altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr8.jpg'},
-    {altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr1.jpg'}
-
+  products: ProductObject[] = [
+    {name: 'Product Name', rating: 5, price: '28.99', altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr1.jpg'},
+    {name: 'Product Name', rating: 3, price: '28.99', altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr2.jpg'},
+    {name: 'Product Name', rating: 1, price: '28.99', altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr3.jpg'},
+    {name: 'Product Name', rating: 1, price: '28.99', altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr4.jpg'},
+    {name: 'Product Name', rating: 4, price: '28.99', altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr5.jpg'},
+    {name: 'Product Name', rating: 5, price: '28.99', altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr6.jpg'},
+    {name: 'Product Name', rating: 5, price: '28.99', altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr7.jpg'},
+    {name: 'Product Name', rating: 3, price: '28.99', altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr8.jpg'},
+    {name: 'Product Name', rating: 3, price: '28.99', altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr4.jpg'},
+    {name: 'Product Name', rating: 2, price: '28.99', altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr2.jpg'},
+    {name: 'Product Name', rating: 5, price: '28.99', altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr5.jpg'},
+    {name: 'Product Name', rating: 4, price: '28.99', altText: 'mini-slider-image', source: 'assets/products for mini-slider/pr6.jpg'},
     ]
 
   constructor() { }
@@ -27,7 +28,7 @@ export class MiniSliderComponent implements OnInit {
   ngOnInit(): void {
     //set slider width
     let slider = document.querySelector('.slider-wrap');
-    let sliderWidth = this.images.length * 287.5;
+    let sliderWidth = this.products.length * 287.5;
     (slider as HTMLDivElement).style.width = sliderWidth + 'px';
 
     let prevButton = document.querySelector('.prev');

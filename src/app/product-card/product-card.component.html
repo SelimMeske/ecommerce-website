@@ -1,0 +1,17 @@
+<div class="image-card">
+    <img src="{{product.source}}" alt="{{product.altText}}">
+    <div class="product-desc">
+        <p style="font-weight: bold;">{{product.name}}</p>
+        <em>Lorem ipsum dolor sit.</em>
+        <div class="stars-holder">
+            <!-- Add rating -->
+            <img *ngFor="let star of counter(product.rating)" src="assets/star-full.png" alt="">
+            <img *ngFor="let star of counter(5-product.rating)" src="assets/star.png" alt="">
+        </div>
+        <p>${{product.price}}</p>
+    </div>
+    <div class="hover-product">
+        <img width="35px" style="margin-right: 10px;" src="assets/next.png" alt="">
+        <p>Check it out</p>
+    </div>
+</div>
