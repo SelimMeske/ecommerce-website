@@ -13,6 +13,7 @@ import { CategoryHomeSectionComponent } from './category-home-section/category-h
 import { TrendingHomeSectionComponent } from './trending-home-section/trending-home-section.component';
 import { ProductCardComponent } from './product-card/product-card.component';
 import { NewsletterComponent } from './newsletter/newsletter.component';
+import { TrustSectionComponent } from './trust-section/trust-section.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { NewsletterComponent } from './newsletter/newsletter.component';
     CategoryHomeSectionComponent,
     TrendingHomeSectionComponent,
     ProductCardComponent,
-    NewsletterComponent
+    NewsletterComponent,
+    TrustSectionComponent
   ],
   imports: [
     BrowserModule,

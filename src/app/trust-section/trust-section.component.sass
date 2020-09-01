@@ -1,0 +1,39 @@
+.main-wrap
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    
+.col
+    width: 340px
+    padding: 0px 10px
+    transition-duration: 0.5s
+    padding-bottom: 50px
+    border-bottom: 2px solid white
+    
+    h3
+        font-weight: bold
+        margin-top: 20px
+        margin-bottom: 20px
+    p
+        color: #949494
+.col:hover
+    cursor: pointer
+    border-bottom: 2px solid black
+    img:nth-child(2)
+        transform: scale(1)
+    img:nth-child(1)
+        transform: scale(0)
+.image
+    position: relative
+    width: 50px
+    height: 50px
+    img
+        width: 50px
+        position: absolute
+        top: 0
+        left: 0
+        transition-duration: 0.4s
+        transform: scale(1)
+    img:nth-child(2)
+        transform: scale(0)
