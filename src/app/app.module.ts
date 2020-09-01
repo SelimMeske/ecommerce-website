@@ -14,6 +14,7 @@ import { TrendingHomeSectionComponent } from './trending-home-section/trending-h
 import { ProductCardComponent } from './product-card/product-card.component';
 import { NewsletterComponent } from './newsletter/newsletter.component';
 import { TrustSectionComponent } from './trust-section/trust-section.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { TrustSectionComponent } from './trust-section/trust-section.component';
     TrendingHomeSectionComponent,
     ProductCardComponent,
     NewsletterComponent,
-    TrustSectionComponent
+    TrustSectionComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
