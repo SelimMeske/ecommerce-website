@@ -28,7 +28,7 @@ export class MiniSliderComponent implements OnInit {
   ngOnInit(): void {
     //set slider width
     let slider = document.querySelector('.slider-wrap');
-    let sliderWidth = this.products.length * 287.5;
+    let sliderWidth = this.products.length * 278;
     (slider as HTMLDivElement).style.width = sliderWidth + 'px';
 
     let prevButton = document.querySelector('.prev');
@@ -36,11 +36,12 @@ export class MiniSliderComponent implements OnInit {
     let currentSliderPosition = 0;
 
     nextButton.addEventListener('click', (e) => {
-      if(currentSliderPosition === (sliderWidth - (287.5 * 4))){
+      if(currentSliderPosition === (sliderWidth - (278 * 4))){
+        (slider as HTMLDivElement).style.transform = 'translateX('+(-currentSliderPosition)+'px)';
         return;
       }
       (prevButton as HTMLDivElement).style.opacity = '1';
-      currentSliderPosition += 287.5;
+      currentSliderPosition += 278;
       (slider as HTMLDivElement).style.transform = 'translateX('+(-currentSliderPosition)+'px)';
       this.showHideArrows(currentSliderPosition, sliderWidth, prevButton, nextButton);
     });
@@ -48,7 +49,7 @@ export class MiniSliderComponent implements OnInit {
       if(currentSliderPosition === 0){
         return;
       }
-      currentSliderPosition -= 287.5;
+      currentSliderPosition -= 278;
       (slider as HTMLDivElement).style.transform = 'translateX('+(-currentSliderPosition)+'px)';
       this.showHideArrows(currentSliderPosition, sliderWidth, prevButton, nextButton);
     });
@@ -57,7 +58,7 @@ export class MiniSliderComponent implements OnInit {
 
   showHideArrows(currentSlidePosition, sliderWidth, prevButton, nextButton){
     console.log(currentSlidePosition);
-    if(currentSlidePosition === (sliderWidth - (287.5 * 4))){
+    if(currentSlidePosition === (sliderWidth - (278 * 4))){
       (nextButton as HTMLDivElement).style.opacity = '0';
     }else{
       (nextButton as HTMLDivElement).style.opacity = '1';

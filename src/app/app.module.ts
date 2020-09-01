@@ -12,6 +12,7 @@ import { BigSliderComponent } from './big-slider/big-slider.component';
 import { CategoryHomeSectionComponent } from './category-home-section/category-home-section.component';
 import { TrendingHomeSectionComponent } from './trending-home-section/trending-home-section.component';
 import { ProductCardComponent } from './product-card/product-card.component';
+import { NewsletterComponent } from './newsletter/newsletter.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ProductCardComponent } from './product-card/product-card.component';
     BigSliderComponent,
     CategoryHomeSectionComponent,
     TrendingHomeSectionComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    NewsletterComponent
   ],
   imports: [
     BrowserModule,
