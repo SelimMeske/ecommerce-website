@@ -9,4 +9,15 @@
             <p>Buy Now</p>
         </div>
     </div>
+    <div class="navi-dots">
+        <div *ngFor="let dot of images; index as i" [ngClass]="{'active-dot': i===0}" class="dot"></div>
+    </div>
+    <div class="arrows-holder">
+        <div class="bs-arrow-holder bs-prev">
+            <div class="bs-arrow bs-arrow-right"></div>
+        </div>
+        <div class="bs-arrow-holder bs-next">
+            <div class="bs-arrow bs-arrow-left"></div>
+        </div>
+    </div>
 </div>

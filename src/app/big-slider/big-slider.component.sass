@@ -21,7 +21,7 @@
     top: 50%
     left: 50%
     transform: translate(50%, -50%)
-    transition-duration: 1s
+    transition-duration: 0.8s
     transition-property: transform
     z-index: 8
     width: 100%
@@ -49,3 +49,103 @@
     margin-bottom: 40px
 .button
     margin-top: 40px
+.navi-dots
+    display: flex
+    justify-content: space-around
+    align-items: center
+    position: absolute
+    bottom: 0%
+    left: 50%
+    transform: translate(-50%, -270%)
+    z-index: 100
+    width: 80px
+.dot
+    width: 14px
+    height: 14px
+    border: 2px solid white
+    border-radius: 100%
+    background: transparent
+    cursor: pointer
+    transition-duration: 0.5s
+.active-dot
+    background: white
+.arrows-holder
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 80%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    z-index: 100
+.bs-arrow
+    width: 25px
+    height: 25px
+    border-top: 2px solid #ffffff
+    border-right: 2px solid #ffffff
+    cursor: pointer
+    position: relative
+.bs-arrow-right
+    transform: rotate(-135deg)
+.bs-arrow-left
+    transform: rotate(45deg)
+.bs-arrow-holder
+    height: 200px
+    width: 50px
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    z-index: 1
+.bs-prev
+    z-index: 20
+    opacity: 1
+    .bs-arrow-right::after
+        content: ''
+        position: absolute
+        width: 25px
+        height: 25px
+        top: 0
+        left: 0
+        border-top: 3px solid #ffffffb9
+        border-right: 3px solid #ffffffb9
+        transform: translate(0px, -5px)
+        opacity: 0
+.bs-prev:hover
+    .arrow-right::after
+       animation: arow-right 2s infinite
+.bs-next
+    z-index: 20
+    .bs-arrow-left::after
+        content: ''
+        position: absolute
+        width: 25px
+        height: 25px
+        top: 0
+        left: 0
+        border-top: 3px solid #838383
+        border-right: 3px solid #838383
+        transform: translate(0px, -5px)
+        opacity: 0
+.bs-next:hover
+    .bs-arrow-left::after
+       animation: arow-right 2s infinite
+@keyframes arow-right
+    0%
+        transform: translate(0px, -5px)
+        opacity: 0
+    50%
+        opacity: 1
+    100%
+        transform: translate(5px, -10px)
+        opacity: 0
+@keyframes arow-left
+    0%
+        transform: translate(0px, -5px)
+        opacity: 0
+    50%
+        opacity: 1
+    100%
+        transform: translate(5px, -10px)
+        opacity: 0
